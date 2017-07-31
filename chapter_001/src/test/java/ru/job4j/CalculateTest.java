@@ -4,28 +4,27 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat; 
+import static org.junit.Assert.assertThat;
 /**
-* Test
-* @author Egor Sysoev (m4mindscape@gmail.com)
-* @version $Id$
-* @since 0.1
+* Test.
+* @author Egor Sysoev (m4mindscape@gmail.com).
+* @version $Id$.
+* @since 0.1.
 */
 public class CalculateTest {
 	/**
-	* Test add
+	* Test add.
 	*/
-	
 	@Test
-	public void whenAddOneToOneThenTwo () {
-		
+	public void whenAddOneToOneThenTwo() {
+
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
-		
+
 		System.setOut(new PrintStream(out));
-		
+
 		Calculate.main(null);
-		
+
 		assertThat(out.toString(), is("Hello World\r\n"));
-		
+
 	}
 }
